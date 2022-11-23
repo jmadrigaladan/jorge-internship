@@ -6,8 +6,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HotCollections = () => {
+  React.useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   const settings = {
     accessibility: true,
     infinite: true,
@@ -71,7 +76,7 @@ const HotCollections = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <div className="col-lg-12 ">
+          <div data-aos="fade-down" className="col-lg-12 ">
             <Slider {...settings}>
               {collection
                 ? collection.map((item) => (
