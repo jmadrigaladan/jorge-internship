@@ -1,10 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
-import nftImage from "../../images/nftImage.jpg";
 import NewItem from "../home/NewItem.jsx";
 import LazyLoadNewItem from "../home/LazyLoadNewItem.jsx";
-
 const AuthorItems = ({ nftCollection, authorImage }) => {
   return (
     <div className="de_tab_content">
