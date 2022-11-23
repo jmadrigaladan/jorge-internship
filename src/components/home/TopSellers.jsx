@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
 import axios from "axios";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const TopSellers = () => {
   const [topSellers, setTopSellers] = React.useState();
+  React.useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   React.useEffect(() => {
     axios
       .get(
@@ -25,7 +28,7 @@ const TopSellers = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <div className="col-md-12">
+          <div className="col-md-12" data-aos="fade-up">
             <ol className="author_list">
               {topSellers
                 ? topSellers.map((author) => (
