@@ -1,7 +1,6 @@
 import React from "react";
 import NewItem from "../home/NewItem.jsx";
 import LazyLoadNewItem from "../home/LazyLoadNewItem.jsx";
-
 const AuthorItems = ({ nftCollection, authorImage }) => {
   return (
     <div className="de_tab_content">
