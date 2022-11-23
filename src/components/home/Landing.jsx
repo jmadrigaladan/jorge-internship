@@ -7,7 +7,8 @@ import "aos/dist/aos.css";
 
 const Landing = () => {
   React.useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ once: true, duration: 2000 });
+    AOS.refresh();
   }, []);
   return (
     <section

@@ -6,7 +6,8 @@ import "aos/dist/aos.css";
 const TopSellers = () => {
   const [topSellers, setTopSellers] = React.useState();
   React.useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ once: true, duration: 2000 });
+    AOS.refresh();
   }, []);
   React.useEffect(() => {
     axios

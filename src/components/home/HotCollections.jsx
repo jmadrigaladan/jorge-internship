@@ -11,7 +11,8 @@ import "aos/dist/aos.css";
 
 const HotCollections = () => {
   React.useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({once: true, duration: 2000 });
+    AOS.refresh();
   }, []);
   const settings = {
     accessibility: true,

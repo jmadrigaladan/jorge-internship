@@ -4,7 +4,8 @@ import "aos/dist/aos.css";
 
 const LandingIntro = () => {
   React.useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ once: true, duration: 2000 });
+    AOS.refresh();
   }, []);
   return (
     <section id="section-intro" className="no-top no-bottom">
