@@ -52,6 +52,7 @@ const ExploreItems = () => {
                 price={item.price}
                 likes={item.likes}
                 nftLink={item.nftId}
+                authorId={item.authorId}
               />
             </div>
           ))
