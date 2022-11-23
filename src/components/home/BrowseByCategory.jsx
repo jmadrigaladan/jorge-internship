@@ -4,7 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const BrowseByCategory = () => {
   React.useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ once: true, duration: 2000 });
+    AOS.refresh();
   }, []);
   return (
     <section id="section-category" className="no-top">
