@@ -82,7 +82,7 @@ const NewItems = () => {
                       price={item.price}
                       likes={item.likes}
                       key={item.id}
-                      nftLink={item.nftId}
+                      nftId={item.nftId}
                       authorId={item.authorId}
                     />
                   ))
