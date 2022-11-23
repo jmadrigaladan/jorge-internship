@@ -12,12 +12,13 @@ const AuthorItems = ({ nftCollection, authorImage }) => {
                   className="col-lg-3 col-md-6 col-sm-6 col-xs-12"
                   key={item.id}
                 >
+                  {console.log(item.nftId)}
                   <NewItem
                     nftImage={item.nftImage}
                     title={item.title}
                     price={item.price}
                     likes={item.likes}
-                    nftLink={item.nftId}
+                    nftId={item.nftId}
                     authorImage={authorImage}
                   />
                 </div>

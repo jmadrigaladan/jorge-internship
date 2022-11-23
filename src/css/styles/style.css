@@ -16782,6 +16782,12 @@ img {
 .loading__image {
   height: 200px;
 }
+.loading__image--large {
+  height: 100%;
+}
+.loading__height-small{
+  height: 35px
+}
 
 .hot-collection__pp {
   height: 60px;
@@ -16806,6 +16812,7 @@ img {
 .loading__title {
   width: 50%;
 }
+
 
 @keyframes loading {
   0% {
