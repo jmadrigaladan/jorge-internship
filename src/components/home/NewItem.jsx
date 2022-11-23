@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function NewItem({ authorImage, expiryDate, nftImage, title, price, likes, nftLink }) {
+function NewItem({
+  authorImage,
+  expiryDate,
+  nftImage,
+  title,
+  price,
+  likes,
+  nftLink,
+  authorId,
+}) {
   const [remainingTime, setRemainingTime] = React.useState("");
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -24,10 +33,11 @@ function NewItem({ authorImage, expiryDate, nftImage, title, price, likes, nftLi
     <div className="nft__item">
       <div className="author_list_pp">
         <Link
-          to="/author"
+          to={`/author/${authorId}`}
           data-bs-toggle="tooltip"
           data-bs-placement="top"
-          title="Creator: Monica Lucas"
+          title="Creator:
+          Monica Lucas"
         >
           <img className="lazy" src={authorImage} alt="" />
           <i className="fa fa-check"></i>

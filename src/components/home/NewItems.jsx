@@ -83,6 +83,7 @@ const NewItems = () => {
                       likes={item.likes}
                       key={item.id}
                       nftLink={item.nftId}
+                      authorId={item.authorId}
                     />
                   ))
                 : new Array(6)
